@@ -11,7 +11,7 @@ function RecomendarHorario() {
   clases.forEach((element) => {
     clases.forEach((element2) => {
       let adicionHoras = element.horas + element2.horas;
-      if (adicionHoras < horasEstudiante && adicionHoras > suma) {
+      if (adicionHoras <= horasEstudiante && adicionHoras > suma && element != element2) {
         clase1 = element.nombreclase;
         clase2 = element2.nombreclase;
         suma = adicionHoras;
